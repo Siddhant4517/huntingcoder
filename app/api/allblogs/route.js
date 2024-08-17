@@ -1,8 +1,29 @@
 import { promises as fs } from "fs";
 import path from "path";
+import corsMiddleware from "../../lib/corsMiddleware";
 
 export async function GET(req) {
   try {
+    // Apply the CORS middleware
+    await new Promise((resolve, reject) => {
+      corsMiddleware(
+        req,
+        {
+          setHeader: (name, value) => {
+            req.headers[name.toLowerCase()] = value;
+          },
+          status: () => 200,
+          end: resolve,
+        },
+        (result) => {
+          if (result instanceof Error) {
+            return reject(result);
+          }
+          resolve(result);
+        }
+      );
+    });
+
     const queryParams = new URL(req.url).searchParams;
     const offset = parseInt(queryParams.get("offset")) || 0;
     const limit = parseInt(queryParams.get("limit")) || 5;
