@@ -11,7 +11,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = { name, email, phone, desc };
-    fetch("http://localhost:3000/api/postContact", {
+    fetch("https://your-backend-api.vercel.app/api/postContact", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",

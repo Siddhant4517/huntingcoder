@@ -2,7 +2,7 @@ import styles from "../../../styles/blogpost.module.css";
 
 async function fetchBlogData(slug) {
   const response = await fetch(
-    `http://localhost:3000/api/getblog?slug=${slug}`,
+    `https://your-backend-api.vercel.app/api/getblog?slug=${slug}`,
     {
       // Important to ensure the fetch request is server-side
       cache: "no-store",

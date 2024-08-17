@@ -7,7 +7,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 
 async function fetchBlogs(offset = 0, limit = 5) {
   const response = await fetch(
-    `http://localhost:3000/api/allblogs?offset=${offset}&limit=${limit}`,
+    `https://your-backend-api.vercel.app/api/allblogs?offset=${offset}&limit=${limit}`,
     {
       cache: "no-store",
     }
