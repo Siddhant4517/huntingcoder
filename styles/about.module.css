@@ -1,0 +1,21 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  max-width: 45vw;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 3rem;
+  min-height: 90vh;
+  margin: 5px auto;
+}
+
+.center {
+  text-align: center;
+}
+
+@media only screen and (max-width: 650px) {
+  .about {
+    margin: 0px auto;
+    padding: 0px;
+  }
+}

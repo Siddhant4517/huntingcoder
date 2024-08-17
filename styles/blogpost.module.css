@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 15rem;
+  min-height: 90vh;
+}
+
+.h1 {
+  text-align: center;
+}
