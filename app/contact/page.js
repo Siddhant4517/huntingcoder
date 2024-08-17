@@ -43,10 +43,11 @@ const Contact = () => {
   };
   return (
     <div className={styles.main}>
+      <h1>Contact Us</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.mb3}>
           <label htmlFor="name" className="form-label">
-            Name:
+            Name
           </label>
           <input
             type="text"
@@ -59,7 +60,7 @@ const Contact = () => {
         </div>
         <div className={styles.mb3}>
           <label htmlFor="exampleInputEmail1" className="form-label">
-            Email:
+            Email Address
           </label>
           <input
             type="email"
@@ -73,7 +74,7 @@ const Contact = () => {
         </div>
         <div className={styles.mb3}>
           <label htmlFor="phone" className="form-label">
-            Phone:
+            Phone Number
           </label>
           <input
             type="number"
@@ -84,9 +85,9 @@ const Contact = () => {
             onChange={handleChange}
           />
         </div>
-        <div className={styles.formfloating}>
+        <div className={styles.mb3}>
           <label htmlFor="floatingTextarea" className="form-label">
-            Comments:{" "}
+            Elaborate your concern
           </label>
           <textarea
             className="form-control"
