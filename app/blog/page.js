@@ -10,6 +10,7 @@ async function fetchBlogs(offset = 0, limit = 5) {
     `https://your-backend-api.vercel.app/api/allblogs?offset=${offset}&limit=${limit}`,
     {
       cache: "no-store",
+      mode: "no-cors",
     }
   );
 
