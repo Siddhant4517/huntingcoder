@@ -1,6 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
-import corsMiddleware from "../../lib/corsMiddleware";
+import corsMiddleware from "../../../lib/corsmiddleware";
 
 export async function GET(req) {
   try {
